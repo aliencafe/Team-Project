@@ -400,9 +400,9 @@ GameObject:
   - component: {fileID: 721068158}
   - component: {fileID: 721068159}
   - component: {fileID: 721068160}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1868,16 +1868,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 50942422071563362, guid: 338dfc622864aac49885e13f4c894bcd,
-        type: 2}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 58178381870579546, guid: 338dfc622864aac49885e13f4c894bcd,
-        type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 24115299f02317e40ab62062cd7047ef, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 338dfc622864aac49885e13f4c894bcd, type: 2}
   m_IsPrefabAsset: 0
@@ -1891,9 +1881,9 @@ GameObject:
   - component: {fileID: 1886768105}
   - component: {fileID: 1886768106}
   - component: {fileID: 1886768107}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Reflector
-  m_TagString: Untagged
+  m_TagString: Reflector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
