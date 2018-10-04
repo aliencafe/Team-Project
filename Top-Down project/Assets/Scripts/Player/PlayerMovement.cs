@@ -9,10 +9,12 @@ public class PlayerMovement : MonoBehaviour
     public float HSpeed;
     public float VSpeed;
 
-    
+    public float MaxHSpeed;
+    public float MaxVSpeed;
 
-    float x;
-    float y;
+    float x1;
+    float x2;
+    float y2;
 
     // Use this for initialization
     void Start()
@@ -24,23 +26,58 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        x = Input.GetAxisRaw("Horizontal");
-        y = Input.GetAxisRaw("Vertical");
+        x1 = Input.GetAxisRaw("Horizontal");
+        x2 = Input.GetAxisRaw("Horizontal2");
+        y2 = Input.GetAxisRaw("Vertical2");
 
-        if (x >= 0.5)
+        if (x1 >= 0.5)
         {
            
-            transform.Rotate(0f, 0f, 5f);
-        }else if (x <= -0.5)
+            transform.Rotate(0f, 0f, -2f);
+        }else if (x1 <= -0.5)
         {
 
-            transform.Rotate(0f, 0f, -5f);
+            transform.Rotate(0f, 0f, 2f);
         }
 
-        if (y == 1)
+        if (GetComponent<Rigidbody2D>().velocity.x > MaxHSpeed)
         {
-            // GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 5f);
-            add force;
+
+            GetComponent<Rigidbody2D>().velocity = new Vector2(MaxHSpeed, GetComponent<Rigidbody2D>().velocity.y);
+
+        } else if (GetComponent<Rigidbody2D>().velocity.x < -MaxHSpeed)
+
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(-MaxHSpeed, GetComponent<Rigidbody2D>().velocity.y);
+        }
+
+        else if (x2 != 0)
+        {
+            float speed = x2 * HSpeed;
+
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(speed, 0));
+
+        }
+
+         if (GetComponent<Rigidbody2D>().velocity.y > MaxVSpeed)
+        {
+
+            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, MaxVSpeed);
+
+        }
+
+        else if (GetComponent<Rigidbody2D>().velocity.y < -MaxVSpeed)
+
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, -MaxVSpeed);
+        }
+
+        else if(y2 != 0)
+        {
+            float speed = y2 * VSpeed;
+
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, speed));
+           
         }
     }
 
