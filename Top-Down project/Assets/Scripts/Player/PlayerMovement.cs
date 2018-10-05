@@ -27,8 +27,8 @@ public class PlayerMovement : MonoBehaviour
     {
 
         x1 = Input.GetAxisRaw("Horizontal");
-        x2 = Input.GetAxisRaw("Horizontal2");
-        y2 = Input.GetAxisRaw("Vertical2");
+        x2 = Input.GetAxis("Horizontal2");
+        y2 = Input.GetAxis("Vertical2");
 
         if (x1 >= 0.5)
         {
@@ -55,9 +55,13 @@ public class PlayerMovement : MonoBehaviour
         {
             float speed = x2 * HSpeed;
 
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(speed, 0));
+            GetComponent<Rigidbody2D>().velocity = new Vector2(speed, GetComponent<Rigidbody2D>().velocity.y);
 
+        }else if (x2 == 0)
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x / 1.3f, GetComponent<Rigidbody2D>().velocity.y);
         }
+
 
          if (GetComponent<Rigidbody2D>().velocity.y > MaxVSpeed)
         {
@@ -76,8 +80,12 @@ public class PlayerMovement : MonoBehaviour
         {
             float speed = y2 * VSpeed;
 
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, speed));
+            GetComponent<Rigidbody2D>().velocity = (new Vector2(GetComponent<Rigidbody2D>().velocity.x, speed));
            
+        }
+        else if (y2 == 0)
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, GetComponent<Rigidbody2D>().velocity.y / 1.3f);
         }
     }
 

@@ -5,26 +5,29 @@ using UnityEngine;
 public class YEET : MonoBehaviour {
     public GameObject Bullet;
    
-    public GameObject Reflector;
+   
 
     public float bulletSpeed = 5;
-   
-	void update () {
-     
-        if (Input.GetKeyDown("space"))
+    public float timeBetweenShots = 3;
+    public Vector3 ShootDirection;
+
+    float Shottimer = 0;
+
+    void update () {
+
+        Shottimer += Time.deltaTime;
+
+
+        if (Shottimer >= timeBetweenShots)
         {
-            Debug.Log("Space");
-            Vector3 mousePosition = Reflector.transform.position;
+               
 
-            mousePosition.z = 0;
-            Vector3 shootDir = mousePosition - transform.position;
-
-            shootDir.Normalize();
+            ShootDirection.Normalize();
 
             GameObject bullet = (GameObject)Instantiate(Bullet, transform.position, Quaternion.identity);
-            bullet.GetComponent<Rigidbody2D>().velocity = bulletSpeed * shootDir;
+            bullet.GetComponent<Rigidbody2D>().velocity = bulletSpeed * ShootDirection;
 
-            Destroy(bullet, 2f);
+            Destroy(bullet, 30f);
 
 
         }
@@ -32,26 +35,5 @@ public class YEET : MonoBehaviour {
 
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-
-
-
-        /*if (collision.gameObject.tag == "Bullet")
-        {
-
-            Vector3 mousePosition = Reflector.transform.position;
-
-            mousePosition.z = 0;
-            Vector3 shootDir = mousePosition - transform.position;
-
-            shootDir.Normalize();
-
-            GameObject bullet = (GameObject)Instantiate(Bullet, transform.position, Quaternion.identity);
-            bullet.GetComponent<Rigidbody2D>().velocity = bulletSpeed * shootDir;
-
-            Destroy(bullet, 2f);
-        }*/
-
-    }
+    
 }
