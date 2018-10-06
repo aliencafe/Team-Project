@@ -22,6 +22,13 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Child's Tag")
+            return; // do nothing
+        Debug.Log("parent goes ouch!");
+    }
+
     // Update is called once per frame
     void Update()
     {

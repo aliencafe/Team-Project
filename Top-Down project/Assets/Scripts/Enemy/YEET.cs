@@ -13,21 +13,22 @@ public class YEET : MonoBehaviour {
 
     float Shottimer = 0;
 
-    void update () {
+    void Update () {
 
         Shottimer += Time.deltaTime;
-
+        
 
         if (Shottimer >= timeBetweenShots)
         {
-               
+
+            Shottimer = 0;
 
             ShootDirection.Normalize();
 
             GameObject bullet = (GameObject)Instantiate(Bullet, transform.position, Quaternion.identity);
             bullet.GetComponent<Rigidbody2D>().velocity = bulletSpeed * ShootDirection;
 
-            Destroy(bullet, 30f);
+            Destroy(bullet, 10f);
 
 
         }
