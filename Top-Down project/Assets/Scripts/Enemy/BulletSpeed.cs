@@ -26,6 +26,7 @@ public class BulletSpeed : MonoBehaviour {
         if(timer >= 0.05f)
         {
             gameObject.tag = "Bullet";
+            Tag = false;
         }
 
         if (rigidbody.velocity.magnitude > maxSpeed)

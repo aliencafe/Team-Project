@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - Reflector
+  - NBullet
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - Player
   - Bullets
   - Walls
-  - 
-  - 
+  - Nbullets
+  - Enemys
   - 
   - 
   - 
