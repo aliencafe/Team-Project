@@ -156,6 +156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4166e08c36bb7c41a9bec081f8228ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealthDisplay: {fileID: 1629731819472456, guid: 4381b75fbd78e7e4ca05d1add08ec520,
+    type: 2}
+  HP: 5
   rigidbody: {fileID: 50942422071563362}
   maxSpeed: 200
 --- !u!212 &212548549330617838

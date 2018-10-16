@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class BulletSpeed : MonoBehaviour {
 
-
+    public GameObject HealthDisplay;
+    public int HP = 5;
     public Rigidbody2D rigidbody;
     public float maxSpeed = 200;
 
@@ -41,7 +42,10 @@ public class BulletSpeed : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player" && collision.gameObject.tag != "Reflector")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+            collision.gameObject.GetComponent<Hp>().Switch = collision.gameObject.GetComponent<Hp>().Switch - 1;
+
+
         }
     }
 }
