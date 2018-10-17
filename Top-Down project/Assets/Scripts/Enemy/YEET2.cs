@@ -2,25 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class YEET : MonoBehaviour {
+public class YEET2 : MonoBehaviour {
     public GameObject Bullet;
- 
+    public float ShootDistance;
 
+    public GameObject Player;
     public float bulletSpeed = 5;
     public float timeBetweenShots = 3;
-    public Vector3 ShootDirection;
+
+    Vector3 ShootDirection;
 
     float Shottimer = 0;
 
     void Update () {
 
         Shottimer += Time.deltaTime;
-        
 
-        if (Shottimer >= timeBetweenShots)
+        ShootDirection = Player.transform.position - transform.position;
+        if (Shottimer >= timeBetweenShots && ShootDirection.magnitude < ShootDistance)
         {
 
             Shottimer = 0;
+
+            ShootDirection = Player.transform.position - transform.position;
 
             ShootDirection.Normalize();
 

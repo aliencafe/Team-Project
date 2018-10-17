@@ -150,7 +150,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4223458951744256, guid: f9ed137fe6ca843499d9cc3b2ba471f2, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114163814543489608, guid: f9ed137fe6ca843499d9cc3b2ba471f2,
         type: 2}
@@ -219,7 +219,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4223458951744256, guid: f9ed137fe6ca843499d9cc3b2ba471f2, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114163814543489608, guid: f9ed137fe6ca843499d9cc3b2ba471f2,
         type: 2}
@@ -351,11 +351,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4223458951744256, guid: f9ed137fe6ca843499d9cc3b2ba471f2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 30.532621
+      value: 30.09
       objectReference: {fileID: 0}
     - target: {fileID: 4223458951744256, guid: f9ed137fe6ca843499d9cc3b2ba471f2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 120.41686
+      value: 120.09
       objectReference: {fileID: 0}
     - target: {fileID: 4223458951744256, guid: f9ed137fe6ca843499d9cc3b2ba471f2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -385,7 +385,45 @@ Prefab:
       propertyPath: m_Name
       value: Shooter (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 212646915305415938, guid: f9ed137fe6ca843499d9cc3b2ba471f2,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d26f1373b75c67c42ae72d36d27e1477,
+        type: 3}
+    - target: {fileID: 4223458951744256, guid: f9ed137fe6ca843499d9cc3b2ba471f2, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 58464398871312408, guid: f9ed137fe6ca843499d9cc3b2ba471f2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.02167979
+      objectReference: {fileID: 0}
+    - target: {fileID: 58464398871312408, guid: f9ed137fe6ca843499d9cc3b2ba471f2,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.0012604401
+      objectReference: {fileID: 0}
+    - target: {fileID: 58464398871312408, guid: f9ed137fe6ca843499d9cc3b2ba471f2,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.65936357
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223458951744256, guid: f9ed137fe6ca843499d9cc3b2ba471f2, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352742787944434, guid: f9ed137fe6ca843499d9cc3b2ba471f2, type: 2}
+      propertyPath: m_TagString
+      value: Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352742787944434, guid: f9ed137fe6ca843499d9cc3b2ba471f2, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114163814543489608, guid: f9ed137fe6ca843499d9cc3b2ba471f2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: f9ed137fe6ca843499d9cc3b2ba471f2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1042823930 stripped
@@ -393,6 +431,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1629731819472456, guid: 4381b75fbd78e7e4ca05d1add08ec520,
     type: 2}
   m_PrefabInternal: {fileID: 1295585411}
+--- !u!1 &1274690571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1352742787944434, guid: f9ed137fe6ca843499d9cc3b2ba471f2,
+    type: 2}
+  m_PrefabInternal: {fileID: 993545022}
+--- !u!114 &1274690572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1274690571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd768bc752f70c41a4323b28db2d001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 1417475186674046, guid: 338dfc622864aac49885e13f4c894bcd, type: 2}
+  ShootDistance: 0
+  Player: {fileID: 825551636}
+  bulletSpeed: 40
+  timeBetweenShots: 0.5
 --- !u!1001 &1295585411
 Prefab:
   m_ObjectHideFlags: 0
@@ -7751,7 +7810,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4020020248486106, guid: 0912df13306dd604cb5ba0a3dd1e874e, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114244131515196490, guid: 0912df13306dd604cb5ba0a3dd1e874e,
         type: 2}
@@ -7798,7 +7857,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4817165495069760, guid: b9af902b97c7e9f4da2eb89181e848f1, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 108732055008532608, guid: b9af902b97c7e9f4da2eb89181e848f1,
         type: 2}
@@ -8028,7 +8087,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4967260273709356, guid: fd7e3d61f95a4a542a7b38e598903f84, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8195094280996747760, guid: fd7e3d61f95a4a542a7b38e598903f84,
         type: 2}
