@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 4fafd1dff12bbf04d949d066782a3358
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 100
+  forceTextureCase: 1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Mars Mission
+  fontNames:
+  - Mars Mission
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 14e61724077ce554997b8b589258faf4, type: 3}
+  - {fileID: 12800000, guid: b8d6e96621eb8d243b657e403a29f5ae, type: 3}
+  - {fileID: 12800000, guid: 451532faffec54240b1886fb8b1d0467, type: 3}
+  customCharacters: 
+  fontRenderingMode: 3
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
