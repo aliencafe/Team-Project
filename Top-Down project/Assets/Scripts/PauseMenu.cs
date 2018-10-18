@@ -8,7 +8,8 @@ public class PauseMenu : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        GetComponent<Canvas>().enabled = false;
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
